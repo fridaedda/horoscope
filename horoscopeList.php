@@ -1,8 +1,10 @@
 <?php
 require "./saveSession.php";
 function updateHoroscope($dateOfBirth) {
-    
-    $dateOfBirth = new DateTime($dateOfBirth);   
+    //DateTime inbuilt function in PHP
+    //Initialising the DateTime() object with a date 
+    $dateOfBirth = new DateTime($dateOfBirth);
+    //echo $datetime->format   
     $month = $dateOfBirth->format('m');
     $day = $dateOfBirth->format('d');
     if (($month == 1 && 20 <= $day) || ($month == 2 && 18 >= $day)){
